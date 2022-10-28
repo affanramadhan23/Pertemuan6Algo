@@ -100,7 +100,47 @@ namespace SearchAlgorithm
                 Console.WriteLine("\nNumber of Comparison: " + ctr);
                 Console.Write("\nContinue search (y/n)");
                 ch = char.Parse(Console.ReadLine());
+
             } while ((ch == 'y') || (ch == 'Y'));
+        }
+        static void Main(String[] args)
+        {
+            program myList = new program();
+            int pilihanmenu;
+            char ch;
+
+            Console.WriteLine("Menu Option");
+            Console.WriteLine("===============");
+            Console.WriteLine("1.Linear Search");
+            Console.WriteLine("2.Binary search");
+            Console.WriteLine("3.Exit");
+            Console.WriteLine("Enter your choice (1,2,3) : ");
+            pilihanmenu = Convert.ToInt32(Console.ReadLine());
+            switch (pilihanmenu)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    Console.WriteLine("-------------");
+                    Console.WriteLine("Linear search");
+                    Console.WriteLine("-------------");
+                    myList.input();
+                    myList.LinearSearch();
+                    break;
+                case 2:
+                    Console.WriteLine("");
+                    Console.WriteLine("-------------");
+                    Console.WriteLine("Binary search");
+                    Console.WriteLine("-------------");
+                    myList.input();
+                    myList.BinarySearch();
+                    break ;
+                case 3:
+                    Console.WriteLine("exit.");
+                    break ;
+                default:
+                    Console.WriteLine("error");
+                    break ;
+            }
         }
     }
 }
