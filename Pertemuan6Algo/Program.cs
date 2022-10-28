@@ -41,7 +41,7 @@ namespace SearchAlgorithm
             do
             {
                 //accept the number to be searched
-                Console.Write("\nEnter element want ypu to search : ");
+                Console.Write("\nEnter element you want to search : ");
                 int item = Convert.ToInt32(Console.ReadLine());
 
                 //apply binary search
